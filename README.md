@@ -32,4 +32,15 @@ Ensure you have the following dependencies installed before running the project:
 
 ## Usage
 - Use the main.py to open the GUI and execute the process.
+- At folder images/examplesignals  you will find examples of the different cases.
+
+---
+
+## Acknowledgments
+
+We would like to express our gratitude to the [ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet) provided by the Kaggle user [grassknoted]. This dataset has been instrumental in training and testing our sign language transcription system. The availability of high-quality data has significantly contributed to the accuracy and effectiveness of our project.
+
+---
+
+
 
