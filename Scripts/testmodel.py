@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 import time
 # Carga el modelo
-model_path = "./prueba2.keras"
+model_path = "./prueba3.keras"
 model = load_model(model_path)
 print("Modelo cargado")
 
@@ -26,7 +26,8 @@ while True:
         
         # Convertir frame a RGB
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        cv2.imshow(frame_rgb)
+        cv2.imshow('a',frame)
+        cv2.waitKey(1)
         # Procesar frame con Mediapipe Hand module
         results = hands.process(frame_rgb)
     
@@ -44,7 +45,6 @@ while True:
         img = cv2.resize(frame_rgb, (64, 64))  # Asegúrate de redimensionar según el tamaño esperado por tu modelo
         img = img / 255.0  # Normaliza los valores de píxeles 
         img = np.expand_dims(img, axis=0)
-        time.sleep(1)
-        # prediction=model.predict(img)
-        # predicted_class = np.argmax(prediction)
-        # print("Prediction", predicted_class)
+        prediction=model.predict(img)
+        predicted_class = np.argmax(prediction)
+        print("Prediction", predicted_class)
